@@ -10,6 +10,7 @@ import androidx.compose.ui.graphics.toArgb
  *   - App link:  https://www.netflix.com/title   (opens deep link on TV)
  *   - Intent:    intent://com.netflix.ninja#Intent;scheme=https;package=com.netflix.ninja;end
  *   - Package:   market://details?id=com.netflix.ninja   (rarely useful via ATV remote)
+ *   - App scheme: playsrf://home, ard://mediathek/, swissunihockey://open
  *
  * @param id           Stable unique identifier (UUID string).
  * @param label        Human-readable label shown in the strip and settings.
@@ -36,9 +37,12 @@ data class CustomShortcut(
         fun validateIntentUri(uri: String): String? {
             val trimmed = uri.trim()
             if (trimmed.isBlank()) return "Intent URI cannot be empty."
-            val allowedPrefixes = listOf("https://", "http://", "intent://", "market://")
-            if (allowedPrefixes.none { trimmed.startsWith(it, ignoreCase = true) }) {
-                return "URI must start with https://, http://, intent://, or market://"
+            if (!trimmed.contains("://")) {
+                return "URI must contain ://, e.g. https://… or playsrf://home"
+            }
+            val scheme = trimmed.substringBefore("://")
+            if (!scheme.matches(Regex("^[a-zA-Z][a-zA-Z0-9+.-]*$"))) {
+                return "URI must start with a valid scheme, e.g. https:// or playsrf://"
             }
             if (trimmed.length > 2048) return "URI is too long (max 2048 characters)."
             return null

@@ -54,68 +54,84 @@ fun CustomShortcut.toRemoteShortcutApp(): RemoteShortcutApp = RemoteShortcutApp(
 
 private val defaultRemoteShortcutApps = listOf(
     RemoteShortcutApp(
-        id = "youtube",
-        launchName = "YouTube",
-        label = "YouTube",
-        mark = "YT",
-        accent = Color(0xFFFF2D20),
-        accentSecondary = Color(0xFFFF7A66)
+        id = "ard_mediathek",
+        launchName = "ard://mediathek/",
+        label = "ARD Mediathek",
+        mark = "ARD",
+        accent = Color(0xFF003D8F),
+        accentSecondary = Color(0xFF00A5E0)
     ),
     RemoteShortcutApp(
-        id = "prime_video",
-        launchName = "Prime Video",
-        label = "Prime Video",
-        mark = "PV",
-        accent = Color(0xFF1E88FF),
-        accentSecondary = Color(0xFF00B8D9)
+        id = "browser",
+        launchName = "https://www.google.com",
+        label = "Browser",
+        mark = "WEB",
+        accent = Color(0xFF00796B),
+        accentSecondary = Color(0xFF4DB6AC)
     ),
     RemoteShortcutApp(
-        id = "jiohotstar",
-        launchName = "JioHotstar",
-        label = "Jio Hotstar",
-        mark = "JH",
-        accent = Color(0xFF6A54FF),
-        accentSecondary = Color(0xFF19C6FF)
+        id = "flicky",
+        launchName = "market://launch?id=app.flicky",
+        label = "Flicky",
+        mark = "FLK",
+        accent = Color(0xFF3F51B5),
+        accentSecondary = Color(0xFF7986CB)
     ),
     RemoteShortcutApp(
-        id = "sonyliv",
-        launchName = "SonyLIV",
-        label = "SonyLIV",
-        mark = "SL",
-        accent = Color(0xFF8E5BFF),
-        accentSecondary = Color(0xFFFF4D7A)
+        id = "geforce_now",
+        launchName = "nvidia://deeplink",
+        label = "GeForce NOW",
+        mark = "GFN",
+        accent = Color(0xFF76B900),
+        accentSecondary = Color(0xFF1B5E20)
     ),
     RemoteShortcutApp(
-        id = "hulu",
-        launchName = "Hulu",
-        label = "Hulu",
-        mark = "HU",
-        accent = Color(0xFF1CE783),
-        accentSecondary = Color(0xFF0B8B4B)
+        id = "live_tv",
+        launchName = "tvhomescreenchannels://com.mediatek.wwtv.tvcenter/playvideo",
+        label = "Live TV",
+        mark = "TV",
+        accent = Color(0xFF455A64),
+        accentSecondary = Color(0xFF90A4AE)
     ),
     RemoteShortcutApp(
-        id = "apple_tv",
-        launchName = "Apple TV",
-        label = "Apple TV",
-        mark = "AT",
-        accent = Color(0xFF2F3C52),
-        accentSecondary = Color(0xFF7D91B3)
+        id = "play_srf",
+        launchName = "playsrf://home",
+        label = "Play SRF",
+        mark = "SRF",
+        accent = Color(0xFFD81B2C),
+        accentSecondary = Color(0xFFFF6F60)
     ),
     RemoteShortcutApp(
-        id = "hbo_max",
-        launchName = "HBO Max",
-        label = "HBO Max",
-        mark = "HM",
-        accent = Color(0xFF7B31FF),
-        accentSecondary = Color(0xFF2C0B63)
+        id = "playsuisse",
+        launchName = "https://www.playsuisse.ch",
+        label = "PlaySuisse",
+        mark = "PS",
+        accent = Color(0xFF7B1FA2),
+        accentSecondary = Color(0xFFE040FB)
     ),
     RemoteShortcutApp(
-        id = "netflix",
-        launchName = "Netflix",
-        label = "Netflix",
-        mark = "N",
-        accent = Color(0xFFD61F2C),
-        accentSecondary = Color(0xFF5B0D18)
+        id = "unihockey",
+        launchName = "swissunihockey://open",
+        label = "Unihockey",
+        mark = "UHC",
+        accent = Color(0xFFD32F2F),
+        accentSecondary = Color(0xFFFF7043)
+    ),
+    RemoteShortcutApp(
+        id = "yallo_tv",
+        launchName = "https://tv.yallo.ch",
+        label = "yallo TV",
+        mark = "YAL",
+        accent = Color(0xFFFF6F00),
+        accentSecondary = Color(0xFFFFB300)
+    ),
+    RemoteShortcutApp(
+        id = "zdf",
+        launchName = "https://www.zdf.de",
+        label = "ZDF",
+        mark = "ZDF",
+        accent = Color(0xFFFA7D19),
+        accentSecondary = Color(0xFFFFB74D)
     )
 )
 
