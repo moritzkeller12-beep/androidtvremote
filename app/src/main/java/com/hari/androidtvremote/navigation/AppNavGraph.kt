@@ -303,7 +303,13 @@ fun AppNavGraph(
                 onPower = {
                     tvRemoteViewModel.sendKey(Remotemessage.RemoteKeyCode.KEYCODE_POWER)
                 },
-                onQuickApp = tvRemoteViewModel::launchQuickApp,
+                onQuickApp = { appName ->
+                    if (appName.contains("://")) {
+                        tvRemoteViewModel.launchCustomShortcut(appName)
+                    } else {
+                        tvRemoteViewModel.launchQuickApp(appName)
+                    }
+                },
                 onRemoteKey = tvRemoteViewModel::sendKey,
                 onClearStatus = tvRemoteViewModel::clearStatus,
                 onVolumeChanged = tvRemoteViewModel::setVolume,
